@@ -18,130 +18,125 @@
             background: #0b1e2d;
             color: white;
             font-family: "Segoe UI", sans-serif;
-            padding: 20px;
         }
 
-        /* Main Card */
+        h2 {
+            color: #ffffff !important;
+            font-weight: bold;
+        }
+
         .card {
-            background: #122b40;
+            background: #112b3c;
             border: 1px solid #1f4068;
             border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            padding: 28px;
         }
 
-        /* Title */
-        h2 {
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 1.9rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Input + Button */
         .btn-custom {
             background-color: #1f8a70;
             color: white;
-            font-weight: 600;
-            transition: 0.2s ease-in-out;
         }
 
         .btn-custom:hover {
             background-color: #28b9a4;
-            transform: scale(1.03);
         }
 
-        /* Result Text */
         .result {
-            font-size: 1.35rem;
-            margin-top: 15px;
+            font-size: 1.3rem;
             font-weight: 600;
+            margin-top: 15px;
         }
 
-        .safe { color: #00ff9d; }
+        .safe { color: #00ff99; }
         .suspicious { color: #ffdd57; }
         .phishing { color: #ff4b5c; }
 
-        /* Explanation Box */
+        .progress {
+            height: 12px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
         .explain-box {
-            background: rgba(255,255,255,0.06);
-            border-radius: 12px;
-            padding: 18px 22px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             margin-top: 25px;
-            border: 1px solid rgba(255,255,255,0.18);
         }
 
         .explain-box h5 {
-            font-size: 1.1rem;
+            color: #ffffff;
             font-weight: bold;
             margin-bottom: 10px;
         }
 
-        .explain-box li {
-            color: #e8e8e8;
+        .explain-box ul li {
+            color: #e6e6e6;
             margin-bottom: 6px;
-            font-size: 0.95rem;
-        }
-
-        /* Progress Bar */
-        .progress {
-            height: 12px;
-            border-radius: 6px;
-            background-color: rgba(255,255,255,0.1);
         }
     </style>
 </head>
 
+<script>
+    // Remove query parameters on page load to prevent refresh from keeping results
+    if (window.location.search.length > 0) {
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+</script>
+
 <body>
 
-    <div class="container d-flex justify-content-center">
-        <div class="col-lg-6 col-md-8 col-sm-12">
-            <div class="card">
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-6">
+            <div class="card shadow">
 
                 <h2 class="text-center mb-4">🔍 Phishing URL Detector</h2>
 
                 <!-- URL Input -->
                 <form method="post">
                     <div class="input-group mb-3">
-                        <input 
-                            type="text"
-                            name="url"
-                            class="form-control"
-                            placeholder="Enter URL"
-                            value="{{ request.form.url if request.method == 'POST' else '' }}"
-                            required>
+                        <input type="text"
+                               name="url"
+                               class="form-control"
+                               placeholder="Enter URL"
+                               value="{{ request.form.url if request.method == 'POST' else '' }}"
+                               required>
                         <button class="btn btn-custom">Check</button>
                     </div>
                 </form>
 
-                <!-- Result Section -->
-                {% if request.method == 'POST' and result %}
-                    <p class="result text-center">{{ result | safe }}</p>
+                <!-- RESULT BLOCK -->
+                {% if result %}
+                    <p class="result 
+                        {% if 'SAFE' in result %}safe{% elif 'SUSPICIOUS' in result %}suspicious{% else %}phishing{% endif %}">
+                        {{ result | safe }}
+                    </p>
                 {% endif %}
 
-                <!-- Risk Progress Bar -->
-                {% if request.method == 'POST' and result %}
-                    <div class="progress mt-2 mb-2">
-                        {% if "SAFE" in result %}
-                            <div class="progress-bar bg-success" style="width: 25%;"></div>
-                        {% elif "SUSPICIOUS" in result %}
-                            <div class="progress-bar bg-warning" style="width: 75%;"></div>
-                        {% else %}
-                            <div class="progress-bar bg-danger" style="width: 100%;"></div>
-                        {% endif %}
-                    </div>
+                <!-- RISK BAR -->
+                {% if result %}
+                <div class="progress">
+                    {% if "SAFE" in result %}
+                        <div class="progress-bar bg-success" style="width: 25%;"></div>
+                    {% elif "SUSPICIOUS" in result %}
+                        <div class="progress-bar bg-warning" style="width: 75%;"></div>
+                    {% else %}
+                        <div class="progress-bar bg-danger" style="width: 100%;"></div>
+                    {% endif %}
+                </div>
                 {% endif %}
 
-                <!-- Explanation Section -->
-                {% if request.method == 'POST' and reasons %}
-                    <div class="explain-box">
-                        <h5>🔎 Why this result?</h5>
-                        <ul>
-                            {% for r in reasons %}
-                                <li>{{ r }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                <!-- EXPLANATION -->
+                {% if reasons %}
+                <div class="explain-box">
+                    <h5>🔍 Why this result?</h5>
+                    <ul>
+                        {% for r in reasons %}
+                            <li>{{ r }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
                 {% endif %}
 
             </div>
