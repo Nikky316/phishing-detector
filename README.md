@@ -137,16 +137,17 @@ Admin analytics panel
 Multi-model comparison (XGBoost, RandomForest)
 
 
+
 ## 📸 Screenshots
 
-### 🔹 Home Page  
-<img src="assets/screenshots/home.png" width="500"/>
+### Home Page
+![Home](home.png)
 
-### 🔹 Suspicious URL Result  
-<img src="assets/screenshots/suspicious.png" width="500"/>
+### Suspicious Result
+![Suspicious](suspicious.png)
 
-### 🔹 Phishing Result  
-<img src="assets/screenshots/phishing.png" width="500"/>
+### Phishing Result
+![Phishing](phishing.png)
 
 
 
