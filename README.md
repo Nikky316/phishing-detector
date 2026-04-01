@@ -137,6 +137,19 @@ Admin analytics panel
 Multi-model comparison (XGBoost, RandomForest)
 
 
+## 📸 Screenshots
+
+### 🔹 Home Page  
+<img src="assets/screenshots/home.png" width="500"/>
+
+### 🔹 Suspicious URL Result  
+<img src="assets/screenshots/suspicious.png" width="500"/>
+
+### 🔹 Phishing Result  
+<img src="assets/screenshots/phishing.png" width="500"/>
+
+
+
 Author
 Nike Nsikak-Nelson
 Cybersecurity Professional | Blue Team | SOC Skills Development
