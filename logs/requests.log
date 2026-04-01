@@ -1,0 +1,25 @@
+2026-04-01 09:02:17,016 — [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-04-01 09:02:17,016 — [33mPress CTRL+C to quit[0m
+2026-04-01 09:02:17,022 —  * Restarting with stat
+2026-04-01 09:02:19,753 —  * Debugger is active!
+2026-04-01 09:02:19,762 —  * Debugger PIN: 792-307-837
+2026-04-01 09:04:32,400 — 127.0.0.1 - - [01/Apr/2026 09:04:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-04-01 09:04:45,124 — 127.0.0.1 - - [01/Apr/2026 09:04:45] "GET / HTTP/1.1" 200 -
+2026-04-01 09:05:10,249 — URL: https://google.com — Result: \U0001f7e2 SAFE — Risk Score: 0.0 — Score: 0.0
+2026-04-01 09:05:10,262 — 127.0.0.1 - - [01/Apr/2026 09:05:10] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-04-01 09:05:10,288 — 127.0.0.1 - - [01/Apr/2026 09:05:10] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:26:00,006 — URL: https://google.com — Result: \U0001f7e2 SAFE — Risk Score: 0.0 — Score: 0.0
+2026-04-01 09:26:00,024 — 127.0.0.1 - - [01/Apr/2026 09:26:00] "[32mPOST /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1[0m" 302 -
+2026-04-01 09:26:00,245 — 127.0.0.1 - - [01/Apr/2026 09:26:00] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:26:13,174 — 127.0.0.1 - - [01/Apr/2026 09:26:13] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:26:17,094 — 127.0.0.1 - - [01/Apr/2026 09:26:17] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:26:49,364 — 127.0.0.1 - - [01/Apr/2026 09:26:49] "GET / HTTP/1.1" 200 -
+2026-04-01 09:27:26,824 — URL: https://google.com — Result: \U0001f7e2 SAFE — Risk Score: 0.0 — Score: 0.0
+2026-04-01 09:27:26,837 — 127.0.0.1 - - [01/Apr/2026 09:27:26] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-04-01 09:27:26,865 — 127.0.0.1 - - [01/Apr/2026 09:27:26] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:30:30,135 — 127.0.0.1 - - [01/Apr/2026 09:30:30] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:30:34,467 — 127.0.0.1 - - [01/Apr/2026 09:30:34] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:42:25,882 — 127.0.0.1 - - [01/Apr/2026 09:42:25] "GET /?result=\U0001f7e2+SAFE+—+Risk+Score:+0.0&reasons=No+major+red+flags+detected HTTP/1.1" 200 -
+2026-04-01 09:42:39,662 — 127.0.0.1 - - [01/Apr/2026 09:42:39] "GET / HTTP/1.1" 200 -
+2026-04-01 09:42:55,052 — 127.0.0.1 - - [01/Apr/2026 09:42:55] "GET / HTTP/1.1" 200 -
