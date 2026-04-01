@@ -1,4 +1,10 @@
-🚀 Phishing URL Detector
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Flask](https://img.shields.io/badge/Flask-Framework-green)
+![Machine Learning](https://img.shields.io/badge/ML-LogisticRegression-orange)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+
+Phishing URL Detector
 A Machine Learning–powered cybersecurity tool that analyzes URLs and classifies them as Safe, Suspicious, or Phishing, with a full explanation of why the URL was flagged.
 This app uses:
 
@@ -10,7 +16,7 @@ Bootstrap Cyber‑UI
 Explainability module
 
 
-🔍 Features
+Features
 ✔ Machine Learning Prediction
 Analyzes 7 engineered URL features:
 
@@ -54,7 +60,7 @@ Predict phishing risk from the terminal using:
 python predict.py
 
 
-🧪 How It Works
+How It Works
 
 User enters a URL
 Features are extracted
@@ -65,7 +71,7 @@ Explanations provide transparency
 UI displays the results in a clean dashboard
 
 
-📦 Installation
+Installation
 Clone the repository:
 git clone https://github.com/Nikky316/phishing-detector.git
 cd phishing-detector
@@ -79,7 +85,7 @@ Install dependencies:
 pip install -r requirements.txt
 
 
-▶️ Run the Application
+Run the Application
 Web App:
 python app.py
 
@@ -98,7 +104,7 @@ Features extracted automatically
 Model stored as model.pkl
 
 
-🛠 File Structure
+File Structure
 phishing-detector/
 │── app.py
 │── predict.py
@@ -112,7 +118,7 @@ phishing-detector/
 │── README.md
 
 
-🌍 Deployment (Optional)
+Deployment (Optional)
 This project can be deployed on:
 ⭐ Render.com (recommended)
 Railway.app
@@ -121,7 +127,7 @@ Vercel (via serverless)
 Deployment steps can be provided on request.
 
 
-🧠 Future Improvements
+Future Improvements
 
 Feature importance visualization
 Real URL dataset integration
@@ -131,7 +137,7 @@ Admin analytics panel
 Multi-model comparison (XGBoost, RandomForest)
 
 
-👩‍💻 Author
+Author
 Nike Nsikak-Nelson
 Cybersecurity Professional | Blue Team | SOC Skills Development
 LinkedIn / Portfolio (I can help you build this too)
